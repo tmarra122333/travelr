@@ -15,6 +15,9 @@ from .forms import UserProfileForm
 class StarterView(TemplateView):
     template_name = 'starter.html'
 
+class About(TemplateView):
+    template_name = "about.html"
+
 class Signup(View):
     # show a form to fill out
     def get(self, request):
