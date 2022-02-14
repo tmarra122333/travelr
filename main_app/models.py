@@ -6,15 +6,21 @@ import time
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=100, default="first name")
+    last_name = models.CharField(max_length=100, default="last name")
+    profile_pic = models.CharField(max_length=500, default="http")
     city = models.CharField(max_length=60)
     join_date = models.DateTimeField(auto_now_add=True)
+    
+    def __str__ (self):
+        return self.user.username
 
 
 class City(models.Model):
     name = models.CharField(max_length=100)
     image = models.CharField(max_length=150)
     country = models.CharField(max_length=150)
+    grid_img = models.CharField(max_length=250, default="http")
 
 class Guide(models.Model):
     title = models.CharField(max_length=150)
