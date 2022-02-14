@@ -1,7 +1,14 @@
 from django import forms
-form .models import Post 
+from .models import Profile
 
-class PostForm(forms.ModelForm):
+# class PostForm(forms.ModelForm):
+#     class Meta:
+#         model = Guide
+#         fields = ('everything in Post model')
+
+
+class UserProfileForm(forms.ModelForm):
     class Meta:
-        model = Post
-        fields = ('everything in Post model')
+        model = Profile
+        fields = ('first_name', 'last_name', 'city', 'profile_pic')
+    
