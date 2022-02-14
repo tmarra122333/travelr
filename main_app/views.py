@@ -6,6 +6,10 @@ from django.views.generic.base import TemplateView
 
 # Create your views here.
 
+
+class StarterView(TemplateView):
+    template_name = 'starter.html'
+
 class Profile(TemplateView):
     template_name = "profile.html"
     def get_context_data(self, **kwargs): #needs to be written as get_context_data
