@@ -86,3 +86,19 @@ body {
     border-radius: 50%/50%; 
 
 }
+
+.detail_image {
+    max-width: 450px;
+    max-height: 450px;
+}
+
+.title_column {
+    text-align: center;
+}
+
+.profile_posts_container, .profile_col {
+    font-size: 20px;
+    border-style: solid;
+}
+
+
