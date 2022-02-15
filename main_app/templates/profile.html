@@ -43,9 +43,23 @@
             </div>
           </div>
     </div>
-    
     <button class="btn btn-default btn-sm"><a href="{% url 'profile_update' profile.pk %}">Edit</a></button>
-
+    
+    
+    <p> My posts:</p>
+    <div class="container-fluid profile_posts_container">
+    <div class="row">
+      {% for guides in guide %}
+        <div class="col profile_col col-md-6">
+            <img class="detail_image" src="{{guides.image}}">
+            <p>{{guides.neighborhood}}</p>
+            <p>{{guides.city}}</p>
+            <a class="profile_guides" href="/{{guides.id}}/guides">{{guides.title}}</a>
+          </div>
+          {%endfor%}
+    </div>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

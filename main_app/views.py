@@ -46,6 +46,10 @@ class Signup(View):
 class ProfilePage(DetailView):
     model = Profile
     template_name = "profile.html"
+    def get_context_data(self, **kwargs):
+        context = super(ProfilePage, self).get_context_data(**kwargs)
+        context['guide'] = Guide.objects.filter(user=self.request.user)
+        return context
 
 
 class CityCreate(CreateView):
@@ -85,3 +89,7 @@ class GuideCreate(View):
         else:
             context = {"form": form}
             return render(request, "guide_create.html", context)
+
+class GuideDetail(DetailView):
+    model = Guide
+    template_name = "guide_detail.html"
