@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from .models import Profile, City, Guide
+from .models import Profile, City, Guide, User
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.base import TemplateView, View
@@ -8,7 +8,7 @@ from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .forms import UserProfileForm
+from .forms import UserProfileForm, GuideCreateForm, UpdateProfileForm
 from django.urls import reverse
 
 # Create your views here.
@@ -64,7 +64,8 @@ class CityCreate(CreateView):
 
 class ProfileUpdate(UpdateView):
     model = Profile
-    fields = ['first_name', 'last_name', 'city', 'profile_pic', ]
+    form_class = UpdateProfileForm
+    # fields = ['first_name', 'last_name', 'city', 'profile_pic', ]
     template_name = "profile_update.html"
     def get_success_url(self):
         return reverse('profile', kwargs={'pk': self.object.pk})
@@ -74,9 +75,26 @@ class CityDetail(DetailView):
     model = City
     template_name = "city_show.html"
 
-
-
-
+class GuideCreate(View):
+    
+    def get(self, request):
+        form = GuideCreateForm()
+        context = {"form": form}
+        print("this is what printing looks like")
+        return render(request, "guide_create.html", context)
+   
+    def post(self, request):
+        print(request.user.id)
+        form = GuideCreateForm(request.POST)
+        if form.is_valid():
+            print("valid")
+            obj = form.save(commit=False)
+            obj.user = request.user
+            obj.save()
+            return redirect("starter")
+        else:
+            context = {"form": form}
+            return render(request, "guide_create.html", context)
 
 
 class GuideDetail(DetailView):

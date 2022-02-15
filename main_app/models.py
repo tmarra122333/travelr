@@ -17,7 +17,7 @@ class Profile(models.Model):
 
 
 class City(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     image = models.CharField(max_length=150)
     country = models.CharField(max_length=150)
     grid_img = models.CharField(max_length=250, default="http")
@@ -27,13 +27,16 @@ class City(models.Model):
 
 class Guide(models.Model):
     title = models.CharField(max_length=150)
-    city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="guides")
+    city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="cities")
+    #TODO: remove country, its linked in city as is
     country = models.CharField(max_length=100)
     neighborhood = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
+    #TODO: category should be its own model? so that we can make them choices
+    #we can choose them instead of letting the user go crazy with it
     category = models.CharField(max_length=50)
     image = models.CharField(max_length=200, default="http")
-    created_at = models.DateTimeField(auto_now_add=True)
+    create_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="users")
 
     def __str__(self):
