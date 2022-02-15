@@ -47,7 +47,7 @@ INSERT INTO main_app_guide(title, city_id, country, neighborhood, description, c
   VALUES
     (
     'Fabrica de Arte Cubano',
-    '5',
+    '2',
     'Cuba',
     'Vedado',
     'La Fabrica de Arte Cubano (FAC), is Havana’s hippest spot. A place unimaginable just a few years ago. It’s an art gallery, music venue, bar, cultural center, dance club all in one. It almost feels like you could be in Brooklyn (for better or worse). The crowd is a fun mix of Cubans and foreigners due to the low $2 cover, and reasonable drink prices',
@@ -61,7 +61,7 @@ INSERT INTO main_app_guide(title, city_id, country, neighborhood, description, c
   VALUES
     (
     'Mercado Agropecuario 19 y B (Farmers Market)',
-    '5',
+    '2',
     'Cuba',
     'Vedado',
     'Locals call this the diplomats farm stand for the higher-quality produce and elevated prices. Indeed, it is Havana’s version of whole foods, yet still a far far cry. But its a nice place to grab a few fruits and veggies, and to see how locals shop. You’ll find more things in the AM than the PM. Depending on seasons, you will find rare items like mint and other herbs, ripe tomatoes, and kiwis. Make sure to bargain, or they will take advantage of you.',

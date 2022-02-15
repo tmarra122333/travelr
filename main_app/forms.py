@@ -1,5 +1,5 @@
 from django import forms
-from .models import Profile
+from .models import Guide, Profile
 
 class UpdateProfileForm(forms.ModelForm):
     class Meta:
@@ -18,4 +18,9 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('first_name', 'last_name', 'city', 'profile_pic')
+
+class GuideCreateForm(forms.ModelForm):
+    class Meta:
+        model = Guide
+        fields = ('title', 'city', 'country', 'neighborhood', 'description', 'category', 'image')
     
