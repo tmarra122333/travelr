@@ -9,6 +9,7 @@ from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .forms import UserProfileForm
+from django.urls import reverse
 
 # Create your views here.
 
@@ -50,7 +51,7 @@ class Create_Profile(CreateView):
     
 
 @method_decorator(login_required, name='dispatch')
-class Profile(DetailView):
+class ProfilePage(DetailView):
     model = Profile
     template_name = "profile.html"
 
@@ -63,3 +64,11 @@ class CityCreate(CreateView):
     #TODO: Change this to bring you to the city detail view when its done
     def get_success_url(self):
         return reverse('starter')
+
+
+class ProfileUpdate(UpdateView):
+    model = Profile
+    fields = ['first_name', 'last_name', 'city', 'profile_pic', ]
+    template_name = "profile_update.html"
+    def get_success_url(self):
+        return reverse('profile', kwargs={'pk': self.object.pk})
