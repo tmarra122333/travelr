@@ -22,18 +22,19 @@ class City(models.Model):
     country = models.CharField(max_length=150)
     grid_img = models.CharField(max_length=250, default="http")
 
+    def __str__(self):
+        return self.name
+
 class Guide(models.Model):
     title = models.CharField(max_length=150)
-    city = models.CharField(max_length=150)
+    city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="guides")
     country = models.CharField(max_length=100)
     neighborhood = models.CharField(max_length=100)
     description = models.TextField(max_length=250)
     category = models.CharField(max_length=50)
-    username = models.CharField(max_length=100)
+    image = models.CharField(max_length=200, default="http")
     created_at = models.DateTimeField(auto_now_add=True)
-    city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="guides")
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="users")
 
-
-
-
+    def __str__(self):
+        return self.title

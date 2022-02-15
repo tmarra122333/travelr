@@ -57,3 +57,32 @@ body {
 .my-container {
     overflow: hidden;
 }
+
+
+
+#join_date{
+    font-size: 15px;
+}
+
+.profile-body {
+    text-align: center;
+    font-size: 60px;
+    background-color: #f5f474;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bowlby One', cursive;
+    margin: 20px;
+}
+
+.profile-container {
+    margin: 40px;
+}
+
+#profile_pic {
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%/50%; 
+
+}
