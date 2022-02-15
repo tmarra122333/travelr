@@ -50,11 +50,12 @@
     <div class="container-fluid profile_posts_container">
     <div class="row">
       {% for guides in guide %}
-        <div class="col profile_col col-md-6">
-            <img class="detail_image" src="{{guides.image}}">
-            <p>{{guides.neighborhood}}</p>
-            <p>{{guides.city}}</p>
+      <div class="col profile_col col-md-6">
+          <div> 
             <a class="profile_guides" href="/{{guides.id}}/guides">{{guides.title}}</a>
+          </div>
+            <img class="detail_image" src="{{guides.image}}">
+            <p>{{guides.neighborhood}}, {{guides.city}} </p>
           </div>
           {%endfor%}
     </div>

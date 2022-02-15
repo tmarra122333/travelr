@@ -8,7 +8,7 @@ from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .forms import UserProfileForm, GuideCreateForm
+from .forms import UserProfileForm, GuideCreateForm, UpdateProfileForm
 from django.urls import reverse
 
 # Create your views here.
@@ -64,7 +64,8 @@ class CityCreate(CreateView):
 
 class ProfileUpdate(UpdateView):
     model = Profile
-    fields = ['first_name', 'last_name', 'city', 'profile_pic', ]
+    form_class = UpdateProfileForm
+    # fields = ['first_name', 'last_name', 'city', 'profile_pic', ]
     template_name = "profile_update.html"
     def get_success_url(self):
         return reverse('profile', kwargs={'pk': self.object.pk})

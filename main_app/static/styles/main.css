@@ -64,9 +64,9 @@ body {
     font-size: 15px;
 }
 
-.profile-body {
+.profile-body, .guide_detail_body {
     text-align: center;
-    font-size: 60px;
+    font-size: 40px;
     background-color: #f5f474;
     text-align: center;
     display: flex;
@@ -74,6 +74,7 @@ body {
     align-items: center;
     font-family: 'Bowlby One', cursive;
     margin: 20px;
+    color: #ef0041;
 }
 
 .profile-container {
@@ -99,6 +100,35 @@ body {
 .profile_posts_container, .profile_col {
     font-size: 20px;
     border-style: solid;
+    border-color: #ef0041;
+    color: #ef0041;
+    font-family: 'Roboto', sans-serif;
 }
 
 
+.guide_description, .guide_detail_image {
+    font-size: 20px;
+    max-width: 600px;
+    font-family: 'Roboto', sans-serif;
+}
+.guide_container {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.guide_column {
+    border: solid;
+    margin: 5px;
+    padding: 5px;
+    color: #ef0041;
+    border-color: #ef0041;
+}
+
+.form-control, .form-group {
+    font-size: 40px;
+    text-align:start;
+    margin: 50px;
+    border: solid;
+    font-family: 'Roboto', sans-serif;
+    
+}
