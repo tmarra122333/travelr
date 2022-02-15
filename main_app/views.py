@@ -46,6 +46,10 @@ class Signup(View):
 class ProfilePage(DetailView):
     model = Profile
     template_name = "profile.html"
+    def get_context_data(self, **kwargs):
+        context = super(ProfilePage, self).get_context_data(**kwargs)
+        context['guide'] = Guide.objects.filter(user=self.request.user)
+        return context
 
 
 class CityCreate(CreateView):
@@ -64,3 +68,17 @@ class ProfileUpdate(UpdateView):
     template_name = "profile_update.html"
     def get_success_url(self):
         return reverse('profile', kwargs={'pk': self.object.pk})
+
+
+
+
+
+
+
+
+
+
+
+class GuideDetail(DetailView):
+    model = Guide
+    template_name = "guide_detail.html"
