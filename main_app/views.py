@@ -70,6 +70,11 @@ class ProfileUpdate(UpdateView):
     def get_success_url(self):
         return reverse('profile', kwargs={'pk': self.object.pk})
 
+
+class CityDetail(DetailView):
+    model = City
+    template_name = "city_show.html"
+
 class GuideCreate(View):
     
     def get(self, request):
@@ -90,6 +95,7 @@ class GuideCreate(View):
         else:
             context = {"form": form}
             return render(request, "guide_create.html", context)
+
 
 class GuideDetail(DetailView):
     model = Guide
