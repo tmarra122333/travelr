@@ -70,9 +70,9 @@ class ProfileUpdate(UpdateView):
         return reverse('profile', kwargs={'pk': self.object.pk})
 
 
-
-
-
+class CityDetail(DetailView):
+    model = City
+    template_name = "city_show.html"
 
 
 

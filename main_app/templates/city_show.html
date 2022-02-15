@@ -1,0 +1,26 @@
+{% extends 'navbar.html' %} 
+{% block content %}
+<div class="detail__img">
+    <img src="{{city.image}}" alt="{{city.name}}" />
+</div>
+    <div class="detail__name">
+        {% if city.name.country %}
+    <div class="icon-text">
+            <span class="icon has-text-info">
+                <i class="fas fa-check-circle"></i>
+            </span>
+            <span>City</span>
+    </div>
+    
+    {% endif %}
+    
+        <h1 class="title">{{city.name}}</h1>
+</div>
+
+        <div class="detail__container">
+            <div class="buttons">
+            <div class="buttons">
+    <!-- Potentially add update and delete city here -->
+
+
+{% endblock %}
