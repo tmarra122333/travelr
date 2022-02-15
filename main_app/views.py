@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from .models import Profile, City, Guide
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
@@ -49,3 +50,13 @@ class Create_Profile(CreateView):
 class Profile(DetailView):
     model = Profile
     template_name = "profile.html"
+
+
+class CityCreate(CreateView):
+    model = City
+    template_name = "city_create.html"
+    fields = ['name', 'image', 'country', 'grid_img']
+    
+    #TODO: Change this to bring you to the city detail view when its done
+    def get_success_url(self):
+        return reverse('starter')
