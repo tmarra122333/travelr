@@ -1,8 +1,3 @@
-body {
-    background-color: #f5f474;
-    overflow-x:hidden;
-    width: 100%px;
-}
 
 .my-row {
     height: 675px;
@@ -10,14 +5,15 @@ body {
 
 .navbar {
 width: 100%px;
+position:fixed;
 }
 
-.cover {
+.cover, .hero {
     width:auto;
     padding-bottom:20px;
     background-size: cover;
     width: 100%px;
-    overflow-x:hidden;
+    position: relative !important;
 }
 
 .headline{
@@ -58,24 +54,9 @@ width: 100%px;
     text-decoration: none;
 }
 
-a:link {
-    color: white;
-
-}
-a:visited {
-    color: white;
-
-}
-
-.my-col:hover {
-    background-color: #2DDFFF;
-    color: white;
-}
-
 .my-container {
     overflow: hidden;
 }
-
 
 
 #join_date{
@@ -106,21 +87,31 @@ a:visited {
 
 }
 
+#myposts {
+    margin-top: 30px;
+    text-align: start;
+    font-size: 25px;
+}
+
 .detail_image {
-    max-width: 450px;
-    max-height: 450px;
+    max-width: 440px;
+    max-height: 440px;
 }
 
 .title_column {
     text-align: center;
 }
 
-.profile_posts_container, .profile_col {
+.profile_posts_container {
     font-size: 20px;
-    border-style: solid;
-    border-color: #ef0041;
     color: #ef0041;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.profile_col {
+    border-style:solid;
+    border-color: #ef0041;
 }
 
 
@@ -140,20 +131,4 @@ a:visited {
     padding: 5px;
     color: #ef0041;
     border-color: #ef0041;
-}
-
-.form-control, .form-group {
-    font-size: 30px;
-    text-align:end;
-    padding: 30px;
-    margin: 60px;
-    border: solid;
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: stretch;
-    align-items: stretch;
-}
-
-.update_form_input {
-    text-align: end !important;
 }

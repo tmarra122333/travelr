@@ -36,7 +36,7 @@ class Guide(models.Model):
     #we can choose them instead of letting the user go crazy with it
     category = models.CharField(max_length=50)
     image = models.CharField(max_length=200, default="http")
-    create_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="users")
 
     def __str__(self):

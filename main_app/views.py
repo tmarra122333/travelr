@@ -16,6 +16,10 @@ from django.urls import reverse
 
 class StarterView(TemplateView):
     template_name = 'starter.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["cities"] = City.objects.all()
+        return context
 
 class About(TemplateView):
     template_name = "about.html"
