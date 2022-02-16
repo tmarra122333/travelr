@@ -8,7 +8,7 @@ from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .forms import UserProfileForm, GuideCreateForm, UpdateProfileForm, UpdateGuideForm
+from .forms import UserProfileForm, GuideCreateForm, UpdateProfileForm, UpdateGuideForm, CityCreateForm
 from django.urls import reverse
 
 # Create your views here.
@@ -58,8 +58,9 @@ class ProfilePage(DetailView):
 
 class CityCreate(CreateView):
     model = City
+    form_class = CityCreateForm
     template_name = "city_create.html"
-    fields = ['name', 'image', 'country', 'grid_img']
+    # fields = ['name', 'image', 'country', 'grid_img']
     
     #TODO: Change this to bring you to the city detail view when its done
     def get_success_url(self):
@@ -83,10 +84,11 @@ class GuideCreate(View):
     
     def get(self, request):
         form = GuideCreateForm()
+        form_class = GuideCreateForm
         context = {"form": form}
         print("this is what printing looks like")
         return render(request, "guide_create.html", context)
-   
+
     def post(self, request):
         print(request.user.id)
         form = GuideCreateForm(request.POST)
