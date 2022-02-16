@@ -2,6 +2,7 @@ body {
     background-color: #f5f474;
     overflow-x:hidden;
     width: 100%px;
+    margin: 0;
 }
 
 .my-row {
@@ -18,6 +19,7 @@ width: 100%px;
     background-size: cover;
     width: 100%px;
     overflow-x:hidden;
+    margin: 0;
 }
 
 .headline{
@@ -40,6 +42,10 @@ width: 100%px;
     height:auto;
     opacity: 60%;
     position: relative;
+    margin: 0;
+    background-size: cover;
+    width: 100%px;
+    overflow:hidden;
 }
 
 .my-col {
