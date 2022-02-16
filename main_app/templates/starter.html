@@ -1,11 +1,12 @@
 {% extends 'navbar.html' %} {% block content %}
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/styles/main.css">
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,43 +22,11 @@
     </div>
     <div class="container-fluid my-container">
         <div class="row my-row">
-          <div class="col-xl-2 col-md-4 col-sm-6 my-col">
-            Barcelona
+          {% for city in cities %}
+          <div class="col-xl-2 col-md-4 col-sm-6 my-col" id="id1">
+            <a style="text-decoration:none" style="color:white;" href="{% url 'city_detail' city.pk %}">{{city.name}}</a>
           </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 my-col">
-            Warsaw
-          </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 my-col">
-            Brooklyn
-          </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 my-col">
-            Tokyo
-          </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 my-col">
-            Seoul
-          </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 col-xm-6 my-col">
-            Bangkok
-          </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 col-xm-6 my-col">
-            San Francisco
-          </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 col-xm-6 my-col">
-            Mexico City
-          </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 col-xm-6 my-col">
-            Berlin
-          </div>
-          <div class="col-xl-2 col-md-4 col-sm-6 col-xm-6 my-col">
-              Hanoi
-            </div>
-            <div class="col-xl-2 col-md-4 col-sm-6 col-xm-6 my-col">
-                Tbilisi
-              </div>
-              <div class="col-xl-2 col-md-4 col-sm-6 col-xm-6 my-col">
-                Moscow
-              </div>
-              
+          {% endfor %}
         </div>
         <!-- the number of columns is 12, so when you assign a col number , i.e col-4 that means that column should take the width of four columns of the 12 -->
         <!-- xs / sm / md / large / extra large are for what the size should be depending on the screen , i.e set a size for md screens as well as a xmall to change the mobile behavior -->

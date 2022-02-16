@@ -44,9 +44,10 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Bowlby One', cursive;
-    color: white;
+    color: white !important;
     font-size: 35px;
     text-align: center;
+    text-decoration: none;
 }
 
 .my-col:hover {
