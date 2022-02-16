@@ -114,3 +114,9 @@ class GuideUpdate(UpdateView):
     template_name = "guide_update.html"
     def get_success_url(self):
         return reverse('guide_detail', kwargs={'pk': self.object.pk})
+
+
+class GuideDelete(DeleteView):
+    model = Guide
+    template_name = "delete_confirmation.html"
+    success_url = "/"
