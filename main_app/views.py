@@ -8,7 +8,7 @@ from django.views.generic import DetailView
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from .forms import UserProfileForm, GuideCreateForm, UpdateProfileForm
+from .forms import UserProfileForm, GuideCreateForm, UpdateProfileForm, UpdateGuideForm
 from django.urls import reverse
 
 # Create your views here.
@@ -104,3 +104,13 @@ class GuideCreate(View):
 class GuideDetail(DetailView):
     model = Guide
     template_name = "guide_detail.html"
+
+
+
+class GuideUpdate(UpdateView):
+    model = Guide
+    form_class = UpdateGuideForm
+
+    template_name = "guide_update.html"
+    def get_success_url(self):
+        return reverse('guide_detail', kwargs={'pk': self.object.pk})

@@ -24,3 +24,17 @@ class GuideCreateForm(forms.ModelForm):
         model = Guide
         fields = ('title', 'city', 'country', 'neighborhood', 'description', 'category', 'image')
     
+
+class UpdateGuideForm(forms.ModelForm):
+    class Meta:
+        model = Guide
+        fields = ('title', 'country', 'neighborhood', 'description', 'category', 'image')
+
+    widgets = {
+        'title': forms.TextInput(attrs={'class': 'form-control'}),
+        'country': forms.TextInput(attrs={'class': 'form-control'}),
+        'neighborhood': forms.TextInput(attrs={'class': 'form-control'}),
+        'description': forms.TextInput(attrs={'class': 'form-control'}),
+        'category': forms.TextInput(attrs={'class': 'form-control'}),
+        'image': forms.TextInput(attrs={'class': 'form-control'}),
+    }
