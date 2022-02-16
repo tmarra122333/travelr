@@ -17,6 +17,7 @@ width: 100%px;
     padding-bottom:20px;
     background-size: cover;
     width: 100%px;
+    overflow-x:hidden;
 }
 
 .headline{

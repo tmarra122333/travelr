@@ -5,13 +5,15 @@
 
 .navbar {
 width: 100%px;
+position:fixed;
 }
 
-.cover {
+.cover, .hero {
     width:auto;
     padding-bottom:20px;
     background-size: cover;
     width: 100%px;
+    position: relative !important;
 }
 
 .headline{
