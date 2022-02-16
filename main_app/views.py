@@ -79,6 +79,11 @@ class ProfileUpdate(UpdateView):
 class CityDetail(DetailView):
     model = City
     template_name = "city_show.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super(CityDetail, self).get_context_data(**kwargs)
+        context['guide'] = Guide.objects.all()
+        return context
 
 class GuideCreate(View):
     
