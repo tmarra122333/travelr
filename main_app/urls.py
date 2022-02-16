@@ -14,4 +14,5 @@ urlpatterns = [
     path('city/guides/add', views.GuideCreate.as_view(), name="guide_create"),
     path('<int:pk>/guides/', views.GuideDetail.as_view(), name="guide_detail"),
     path('<int:pk>/guide_update/', views.GuideUpdate.as_view(), name ="guide_update"),
+    path('<int:pk>/guide_delete/', views.GuideDelete.as_view(), name ="guide_delete"),
 ]
