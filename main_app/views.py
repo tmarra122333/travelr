@@ -46,7 +46,6 @@ class Signup(View):
             context = {"form": form, "profile_form": profile_form}
             return render(request, "registration/signup.html", context)
 
-@method_decorator(login_required, name='dispatch')
 class ProfilePage(DetailView):
     model = Profile
     template_name = "profile.html"
