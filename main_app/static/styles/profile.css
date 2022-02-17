@@ -6,6 +6,10 @@
     font-size: 18px;
 }
 
+.nav-link, .navbar-brand {
+    color: white !important;
+}
+
 #join_date{
     font-size: 15px;
 }

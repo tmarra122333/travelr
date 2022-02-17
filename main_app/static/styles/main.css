@@ -1,14 +1,12 @@
 #navbar {
     background-color: #4b50fa !important;
-    color: white !important;
     font-family: 'Bowlby One', cursive;
     font-weight: lighter !important;
 }
 
-.nav-text {
-    color: white;
+.nav-link, .navbar-brand {
+    color: white !important;
 }
-
 .my-row {
     height: 675px;
 }
@@ -208,12 +206,8 @@ a:visited {
 
 #card_style {
     margin: 5px;
-    /* background-color: #f5f474; */
-    /* background-color: #00f2a2; */
-    /* background-color: #2DDFFF; */
     background-color: #ffb480;
     border: solid;
-    /* border-color: #ef0041; */
     border-color: #4b50fa;
 }
 
@@ -226,9 +220,6 @@ a:visited {
 .profile-body {
     text-align: center;
     font-size: 16px;
-    /* background-color: #f5f474; */
-    /* background-color: #00f2a2; */
-    /* background-color: #2DDFFF; */
     background-color: #ffb480;
     text-align: center;
     display: flex;
@@ -236,16 +227,12 @@ a:visited {
     align-items: center;
     font-family: 'Bowlby One', cursive;
     margin: 20px;
-    /* color: #ef0041; */
     color: #4b50fa;
 }
 
 .create-body{
     text-align: center;
     font-size: 16px;
-    /* background-color: #f5f474; */
-    /* background-color: #00f2a2; */
-    /* background-color: #2DDFFF; */
     background-color: #ffb480;
     text-align: center;
     display: flex;
@@ -253,7 +240,6 @@ a:visited {
     align-items: center;
     font-family: 'Bowlby One', cursive;
     margin: 20px;
-    /* color: #ef0041; */
     color: #4b50fa;
-    padding-bottom: 200px;
+    padding-bottom: 300px;
 }
