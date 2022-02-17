@@ -1,3 +1,8 @@
+#icon {
+    max-width: 80px;
+    max-height: 60px;
+}
+
 #navbar {
     background-color: #4b50fa !important;
     font-family: 'Roboto', sans-serif;
