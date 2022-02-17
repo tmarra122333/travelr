@@ -1,21 +1,21 @@
-body {
-    background-color: #f5f474;
-    overflow-x:hidden;
-    width: 100%px;
-    margin: 0;
+#navbar {
+    background-color: #4b50fa !important;
+    color: white !important;
+    font-family: 'Bowlby One', cursive;
+    font-weight: lighter !important;
+}
+
+.nav-text {
+    color: white;
 }
 
 .my-row {
     height: 675px;
 }
 
-.navbar {
-width: 100%px;
-}
-
 .cover {
     width:auto;
-    padding-bottom:20px;
+    padding-bottom:0px;
     background-size: cover;
     width: 100%px;
     overflow-x:hidden;
@@ -52,8 +52,8 @@ width: 100%px;
     border: solid;
     border-color: white;
     overflow:hidden;
-    background-color: #ef0041;
-    /* background-color: #00f2a2; */
+    /* background-color: #ef0041; */
+    background-color: #4b50fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,15 +66,14 @@ width: 100%px;
 
 a:link {
     color: white;
-
 }
 a:visited {
     color: white;
-
 }
 
 .my-col:hover {
-    background-color: #2DDFFF;
+    /* background-color: #2DDFFF; */
+    background-color: #ffb480;
     color: white;
 }
 
@@ -91,14 +90,17 @@ a:visited {
 .profile-body, .guide_detail_body {
     text-align: center;
     font-size: 40px;
-    background-color: #f5f474;
+    /* background-color: #00f2a2; */
+    /* background-color: #2DDFFF; */
+    background-color: #ffb480;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Bowlby One', cursive;
     margin: 20px;
-    color: #ef0041;
+    /* color: #ef0041; */
+    color: #4b50fa;
 }
 
 .profile-container {
@@ -124,8 +126,10 @@ a:visited {
 .profile_posts_container, .profile_col {
     font-size: 20px;
     border-style: solid;
-    border-color: #ef0041;
-    color: #ef0041;
+    /* border-color: #ef0041; */
+    border-color: #4b50fa;
+    /* color: #ef0041; */
+    color: #4b50fa;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -144,8 +148,10 @@ a:visited {
     border: solid;
     margin: 5px;
     padding: 5px;
-    color: #ef0041;
-    border-color: #ef0041;
+    /* color: #ef0041; */
+    /* border-color: #ef0041; */
+    color: #4b50fa;
+    border-color: #4b50fa;
 }
 
 .form-group {
@@ -168,17 +174,32 @@ a:visited {
 .city-body {
     text-align: center;
     font-size: 40px;
-    background-color: #f5f474;
+    /* background-color: #00f2a2; */
+    /* background-color: #2DDFFF; */
+    background-color: #ffb480;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Bowlby One', cursive;
     margin: 0;
-    margin-top: 100px;
-    color: #ef0041;
-    padding-top: 100px;
+    
+    /* color: #ef0041; */
+    color: #4b50fa;
+    padding-top: 50px;
+    padding-bottom: 100px;
 }
+
+.city-header {
+    padding-bottom: 45px;
+    font-size: 65px;
+    line-height: 64px;
+}
+
+
+#card { transition: all .2s ease-in-out; }
+#card:hover { transform: scale(1.1); }
+
 
 #city_img{
     max-width: 700px;
@@ -187,9 +208,13 @@ a:visited {
 
 #card_style {
     margin: 5px;
-    background-color: #f5f474;
+    /* background-color: #f5f474; */
+    /* background-color: #00f2a2; */
+    /* background-color: #2DDFFF; */
+    background-color: #ffb480;
     border: solid;
-    border-color: #ef0041;
+    /* border-color: #ef0041; */
+    border-color: #4b50fa;
 }
 
 #newpost{
@@ -201,12 +226,34 @@ a:visited {
 .profile-body {
     text-align: center;
     font-size: 16px;
-    background-color: #f5f474;
+    /* background-color: #f5f474; */
+    /* background-color: #00f2a2; */
+    /* background-color: #2DDFFF; */
+    background-color: #ffb480;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Bowlby One', cursive;
     margin: 20px;
-    color: #ef0041;
+    /* color: #ef0041; */
+    color: #4b50fa;
+}
+
+.create-body{
+    text-align: center;
+    font-size: 16px;
+    /* background-color: #f5f474; */
+    /* background-color: #00f2a2; */
+    /* background-color: #2DDFFF; */
+    background-color: #ffb480;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bowlby One', cursive;
+    margin: 20px;
+    /* color: #ef0041; */
+    color: #4b50fa;
+    padding-bottom: 200px;
 }

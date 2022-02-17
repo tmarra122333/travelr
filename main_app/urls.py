@@ -15,4 +15,6 @@ urlpatterns = [
     path('<int:pk>/guides/', views.GuideDetail.as_view(), name="guide_detail"),
     path('<int:pk>/guide_update/', views.GuideUpdate.as_view(), name ="guide_update"),
     path('<int:pk>/guide_delete/', views.GuideDelete.as_view(), name ="guide_delete"),
+    path('<int:pk>/city_delete/', views.CityDelete.as_view(), name ="city_delete"),
+    path('<int:pk>/city_update/', views.CityUpdate.as_view(), name ="city_update"),
 ]

@@ -13,9 +13,9 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand navbar-light bg-info fixed-top">
+    <nav id="navbar" class="navbar navbar-expand navbar-light bg-info fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'starter'%}">Travelr</a>
+        <a class="navbar-brand nav-text" href="{% url 'starter'%}">Travelr</a>
         </button>
         <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav mr-auto">
@@ -35,6 +35,7 @@
         {% if user.is_authenticated %}
         <li class="nav-item active">
       <a class="nav-link" href="{% url 'profile' user.id %}">{{user.username}}</a>
+      
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'logout'%}?next=/">Logout</a>
@@ -51,9 +52,8 @@
         </div>
       </div>
       </nav>
-        <div class="container-fluid">
 
             {% block content %}{% endblock %}
 
-        </div>
+       
     
