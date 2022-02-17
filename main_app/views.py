@@ -126,3 +126,16 @@ class GuideDelete(DeleteView):
     model = Guide
     template_name = "delete_confirmation.html"
     success_url = "/"
+
+class CityDelete(DeleteView):
+    model = City
+    template_name = "delete_confirmation.html"
+    success_url = "/"
+
+class CityUpdate(UpdateView):
+    model = City
+    fields = ['name', 'image', 'country', 'grid_img', ]
+
+    template_name = "city_update.html"
+    def get_success_url(self):
+        return reverse('city_detail', kwargs={'pk': self.object.pk})

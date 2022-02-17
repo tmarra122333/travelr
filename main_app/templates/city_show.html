@@ -3,29 +3,37 @@
   {% block content %}
   
   <div class="city-body">
+
     <div class="pt-5"></div>
     <div class="container pt-5">
       <div class="row">
+        <div class="col city-header">
+          <p class="title">{{city.name}}
+            <br class="city-break">{{city.country}}</br>
+          </p>
+        </div>
+      </div>
+      <div class="row" id="city-left">
         <div class="col-lg-6 overflow-hidden">
           <img id="city_img" src="{{city.image}}" alt="{{city.name}}" />
           <div class="detail__name">
-            <h1 class="title">{{city.name}}</h1>
-            <h4 class="">{{city.country}}</h4>
-            <p><a id="newpost" href="{% url 'guide_create' %}">Add a new post</a></p>
+            <p><a id="newpost" href="{% url 'guide_create' %}">Add a new post</a>
+            <a id="newpost" href="{% url 'city_delete' city.pk %}">Delete</a>
+            <a id="newpost" href="{% url 'city_update' city.pk %}">Edit</a></p>
         </div>
         </div>
         <div class="col-lg-6 overflow-auto">
           <div class="container">
-            <h2>What to do in {{city.name}}:</h2>
-              <div class="row">
+              <div class="row" id="city-right">
             {% for guides in city.cities.all %}
-            <div class="col-lg-6 d-flex align-items-stretch">
+            <div id="card" class="col-lg-6 d-flex align-items-stretch">
             <div id="card_style" class="card" style="width: 50rem">
               <img class="card-img-top" src="{{guides.image}}" />
               <div class="card-body">
-                  <h5 class="card-title">{{guides.title}}</h5>
-                  <p class="card-text">{{guides.category}}</p>
-                <a class="btn btn-primary" href="/{{guides.id}}/guides">{{guides.title}}</a>
+                <h5 class="card-text">{{guides.category}}</h5>
+                  <h2 class="card-title">{{guides.title}}</h2>
+                <a class="btn btn-primary" href="/{{guides.id}}/guides">View Post</a>
+    
               </div>
               
             </div>
