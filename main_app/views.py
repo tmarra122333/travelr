@@ -46,6 +46,7 @@ class Signup(View):
             context = {"form": form, "profile_form": profile_form}
             return render(request, "registration/signup.html", context)
 
+@method_decorator(login_required, name='dispatch')
 class ProfilePage(DetailView):
     model = Profile
     template_name = "profile.html"
@@ -54,7 +55,7 @@ class ProfilePage(DetailView):
         context['guide'] = Guide.objects.filter(user=self.request.user)
         return context
 
-
+@method_decorator(login_required, name='dispatch')
 class CityCreate(CreateView):
     model = City
     form_class = CityCreateForm
@@ -65,7 +66,7 @@ class CityCreate(CreateView):
     def get_success_url(self):
         return reverse('starter')
 
-
+@method_decorator(login_required, name='dispatch')
 class ProfileUpdate(UpdateView):
     model = Profile
     form_class = UpdateProfileForm
@@ -84,6 +85,7 @@ class CityDetail(DetailView):
         context['guide'] = Guide.objects.all()
         return context
 
+@method_decorator(login_required, name='dispatch')
 class GuideCreate(View):
     
     def get(self, request):
@@ -112,7 +114,7 @@ class GuideDetail(DetailView):
     template_name = "guide_detail.html"
 
 
-
+@method_decorator(login_required, name='dispatch')
 class GuideUpdate(UpdateView):
     model = Guide
     form_class = UpdateGuideForm
@@ -121,17 +123,19 @@ class GuideUpdate(UpdateView):
     def get_success_url(self):
         return reverse('guide_detail', kwargs={'pk': self.object.pk})
 
-
+@method_decorator(login_required, name='dispatch')
 class GuideDelete(DeleteView):
     model = Guide
     template_name = "delete_confirmation.html"
     success_url = "/"
 
+@method_decorator(login_required, name='dispatch')
 class CityDelete(DeleteView):
     model = City
     template_name = "delete_confirmation.html"
     success_url = "/"
 
+@method_decorator(login_required, name='dispatch')
 class CityUpdate(UpdateView):
     model = City
     fields = ['name', 'image', 'country', 'grid_img', ]
