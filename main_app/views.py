@@ -71,7 +71,7 @@ class CityCreate(CreateView):
     
     #TODO: Change this to bring you to the city detail view when its done
     def get_success_url(self):
-        return reverse('starter')
+        return reverse('city_detail', kwargs={'pk': self.object.pk})
 
 @method_decorator(login_required, name='dispatch')
 class ProfileUpdate(UpdateView):
