@@ -1,9 +1,12 @@
 #navbar {
     background-color: #4b50fa !important;
-    color: white !important;
     font-family: 'Roboto', sans-serif;
     font-weight: 150px !important;
     font-size: 18px;
+}
+
+.navbar-brand {
+    font-family: 'Bowlby One', cursive;
 }
 
 .nav-link, .navbar-brand {

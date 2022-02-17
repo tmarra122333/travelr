@@ -58,6 +58,24 @@ INSERT INTO main_app_guide(title, city_id, country, neighborhood, description, c
 
 -- INSERT INTO main_app_city(name, image, country, grid_img) 
 -- VALUES (
+-- 'Berlin',
+-- 'https://www.worldatlas.com/r/w1200/upload/7b/92/51/shutterstock-1011630226.jpg',
+-- 'Germany',
+-- 'https://previews.123rf.com/images/franzidraws/franzidraws1604/franzidraws160400050/55798423-seamless-banner-of-berlin-s-skyline-hand-drawn-black-and-white-illustration.jpg'
+-- );
+
+-- INSERT INTO main_app_city(name, image, country, grid_img) 
+-- VALUES (
+-- 'Havana',
+-- 'https://media.gq.com/photos/5914dd2943572d096b80c8f3/4:3/w_1728,h_1296,c_limit/guide-to-old-havana-cuba.jpg',
+-- 'Cuba',
+-- 'https://previews.123rf.com/images/franzidraws/franzidraws1606/franzidraws160600007/60559448-la-havane-cuba-dessin%C3%A9s-%C3%A0-la-main-illustration-en-noir-et-blanc.jpg'
+-- );
+
+
+
+-- INSERT INTO main_app_city(name, image, country, grid_img) 
+-- VALUES (
 -- 'Moscow',
 -- 'https://cdn.britannica.com/26/116526-050-76C37BBC/Cathedral-of-St-Basil-the-Blessed-Moscow.jpg',
 -- 'Russia',
@@ -139,20 +157,4 @@ INSERT INTO main_app_guide(title, city_id, country, neighborhood, description, c
 -- 'https://cdn.britannica.com/26/116526-050-76C37BBC/Cathedral-of-St-Basil-the-Blessed-Moscow.jpg',
 -- 'Spain',
 -- 'https://previews.123rf.com/images/franzidraws/franzidraws1604/franzidraws160400050/55798423-seamless-banner-of-berlin-s-skyline-hand-drawn-black-and-white-illustration.jpg'
--- );
-
--- INSERT INTO main_app_city(name, image, country, grid_img) 
--- VALUES (
--- 'Berlin',
--- 'https://www.worldatlas.com/r/w1200/upload/7b/92/51/shutterstock-1011630226.jpg',
--- 'Germany',
--- 'https://previews.123rf.com/images/franzidraws/franzidraws1604/franzidraws160400050/55798423-seamless-banner-of-berlin-s-skyline-hand-drawn-black-and-white-illustration.jpg'
--- );
-
--- INSERT INTO main_app_city(name, image, country, grid_img) 
--- VALUES (
--- 'Havana',
--- 'https://media.gq.com/photos/5914dd2943572d096b80c8f3/4:3/w_1728,h_1296,c_limit/guide-to-old-havana-cuba.jpg',
--- 'Cuba',
--- 'https://previews.123rf.com/images/franzidraws/franzidraws1606/franzidraws160600007/60559448-la-havane-cuba-dessin%C3%A9s-%C3%A0-la-main-illustration-en-noir-et-blanc.jpg'
 -- );
