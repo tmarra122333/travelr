@@ -1,0 +1,112 @@
+#navbar {
+    background-color: #4b50fa !important;
+    color: white !important;
+    font-family: 'Bowlby One', cursive;
+    font-weight: lighter !important;
+    font-size: 18px;
+}
+
+#join_date{
+    font-size: 15px;
+}
+
+.profile-body, .guide_detail_body {
+    text-align: center;
+    font-size: 40px;
+    /* background-color: #f5f474; */
+    /* background-color: #00f2a2; */
+    background-color: #ffb480;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bowlby One', cursive;
+    margin: 20px;
+    color: #4b50fa;
+}
+
+#guide-detail {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.profile-container {
+    margin: 40px;
+}
+
+#profile_pic {
+    margin-top: 30px;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%/50%; 
+
+}
+
+#myposts {
+    margin-top: 30px;
+    text-align: start;
+    font-size: 25px;
+    font-kerning: 20px;
+}
+
+.detail_image {
+    max-width: 440px;
+    max-height: 440px;
+}
+
+.title_column {
+    text-align: center;
+}
+
+.profile_posts_container {
+    font-size: 20px;
+    /* color: #ef0041; */
+    color: #4b50fa;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+
+.profile_col {
+    border-style:solid;
+    /* border-color: #ef0041; */
+    border-color: #4b50fa;
+}
+
+
+.guide_description, .guide_detail_image {
+    font-size: 20px;
+    max-width: 600px;
+    font-family: 'Roboto', sans-serif;
+}
+.guide_container {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 60px;
+}
+
+.guide_column {
+    border: solid;
+    margin: 5px;
+    padding: 5px;
+    /* color: #ef0041; */
+    /* border-color: #ef0041; */
+    color: #4b50fa;
+    border-color: #4b50fa;
+}
+
+#card { transition: all .2s ease-in-out; }
+#card:hover { transform: scale(1.1); }
+
+#card_style {
+    margin: 5px;
+    background-color: #ffb480;
+    border: solid;
+    border-color: #4b50fa;
+}
+
+#profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
