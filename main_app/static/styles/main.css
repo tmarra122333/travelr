@@ -1,7 +1,11 @@
 #navbar {
     background-color: #4b50fa !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 150px !important;
+}
+
+.navbar-brand {
     font-family: 'Bowlby One', cursive;
-    font-weight: lighter !important;
 }
 
 .nav-link, .navbar-brand {
@@ -25,9 +29,9 @@
     justify-content: center;
     align-items: center;
     font-family: 'Bowlby One', cursive;
-    color: black;
+    color: white;
     opacity: 100%;
-    font-size: 100px;
+    font-size: 110px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -165,6 +169,18 @@ a:visited {
     align-items: stretch;
 }
 
+#form-group-delete {
+    font-size: 30px;
+    text-align:end;
+    padding: 30px;
+    margin: 60px;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+
 #form-group-signup {
     font-size: 20px;
     padding: 100px;
@@ -186,6 +202,7 @@ a:visited {
     border-color: #4b50fa;
     margin-top: 20px;
 }
+
 
 .update_form_input {
     text-align: end !important;
