@@ -32,7 +32,7 @@
               <div class="card-body">
                 <h5 class="card-text">{{guides.category}}</h5>
                   <h2 class="card-title">{{guides.title}}</h2>
-                <a class="btn btn-primary" href="/{{guides.id}}/guides">View Post</a>
+                <a class="btn btn-primary" href="{% url 'guide_detail' guides.pk %}">View Post</a>
     
               </div>
               
