@@ -18,8 +18,15 @@ class StarterView(TemplateView):
     template_name = 'starter.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["cities"] = City.objects.all()
+        city=self.request.GET.get("city")
+        if city != None: 
+            context["cities"] = City.objects.filter(name__icontains=city)
+        else: 
+            context["cities"] = City.objects.all()
+        
         return context
+    
+
 
 class About(TemplateView):
     template_name = "about.html"
@@ -143,3 +150,4 @@ class CityUpdate(UpdateView):
     template_name = "city_update.html"
     def get_success_url(self):
         return reverse('city_detail', kwargs={'pk': self.object.pk})
+
