@@ -90,6 +90,9 @@
                 </div>
                 <div>
                     <img class="guide_detail_image" src="{{ guide.image }}">
+                    {%if guide.image2 %}
+                    <img class="guide_detail_image" src="{{ guide.image2 }}">
+                    {%endif%}
                 </div>
             </div>
         </div>
