@@ -89,12 +89,13 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 60px;
+    
 }
 
 .guide_column {
     border: solid;
     margin: 5px;
-    padding: 5px;
+    padding: 50px;
     /* color: #ef0041; */
     /* border-color: #ef0041; */
     color: #4b50fa;

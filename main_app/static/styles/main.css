@@ -245,16 +245,13 @@ a:visited {
 #card:hover { transform: scale(1.1); }
 
 
-#city_img{
-    max-width: 700px;
-    max-height: 900px;
-}
 
 #card_style {
     margin: 5px;
     background-color: #ffb480;
     border: solid;
     border-color: #4b50fa;
+    margin-bottom: 20px;
 }
 
 #newpost{
@@ -288,4 +285,15 @@ a:visited {
     margin: 20px;
     color: #4b50fa;
     /* padding-bottom: 300px; */
+}
+
+#city_img {
+        /* position: sticky;
+     
+        left: 0; */
+        
+        max-width: 600px;
+        max-height: 800px;
+        /* overflow-y:scroll;
+        overflow-x:hidden; */
 }

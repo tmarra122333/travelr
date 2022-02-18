@@ -15,55 +15,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Bowlby+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>Document</title>
+    <title>Travelr- {% block title %}{% endblock %}</title> 
 </head>
 
 
 <body class="guide_detail_body">
 
-
     <nav id="navbar" class="navbar navbar-expand navbar-light bg-info fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'starter'%}">Travelr</a>
-            </button>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'about'%}">About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'city_create'%}">Create City</a>
-                    </li>
-                </ul>
-
-
-                <ul class="nav navbar-nav">
-                    {% if user.is_authenticated %}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'profile' user.id %}">{{user.username}}</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'logout'%}?next=/">Logout</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'login'%}">Login</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'signup'%}">Signup</a>
-                    </li>
-                    {% endif %}
-                </ul>
-                {% url 'starter' as home %}
-                {% if request.path == home %}
-                <form class="">
-                    <input type="text" class="" placeholder="Search">
-                    <button type="submit" class="">Submit</button>
-                </form>
-                {% endif %}
-            </div>
+          <a class="navbar-brand nav-text" href="{% url 'starter'%}">Travelr</a>
+          </button>
+          <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav mr-auto">
+            <li class="nav-item active">
+          <a class="nav-link" href="{% url 'about'%}">About</a>
+          </li>
+           <li class="nav-item active">
+          <a class="nav-link" href="{% url 'city_create'%}">Contribute</a>
+        </li>
+        </ul>
+        
+      </div>
+      <ul class="nav navbar-nav">
+        {% if user.is_authenticated %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'profile' user.id %}">{{user.username}}</a>
+          
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'logout'%}?next=/">Logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'login'%}">Login</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'signup'%}">Signup</a>
+        </li>
+        {% endif %}
+      </ul>
+      {% url 'starter' as home %}
+      {% if request.path == home %}
+      <form method="GET">
+          <input type="text" name="city" placeholder="Search">
+        <button type="submit" class="">Submit</button>
+      </form>
+      {% endif %}
         </div>
-    </nav>
+        </nav>
 
 
     <div id="guide-detail" class="container-fluid guide_container">
@@ -73,7 +72,7 @@
                     {{guide.neighborhood}}
                 </div>
                 <div class="guide_description">
-                    {{guide.city.name}}, {{guide.city.country}}
+                    <a href="{% url 'city_detail' guide.city.pk%}">{{guide.city.name}}</a>, {{guide.city.country}}
                 </div>
                 <div class="guide_description">
                     Author: {{ guide.user.username}}
